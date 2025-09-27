@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.welcome-container {
+  background: linear-gradient(135deg, #d44bf3, #0b3173);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.welcome-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease;
+}
+
+.greeting {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #dbe9ff;
+}
+
+.app-name {
+  font-size: 3rem;
+  margin: 10px 0 20px;
+  background: linear-gradient(90deg, #fbc02d, #f57c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.access-warning {
+  color: #5b0808;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sign-in-btn,
+.sign-up-btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #da42f5, #841ac6);
+  color: white;
+  box-shadow: 0 4px 15px rgba(223, 139, 212, 0.544);
+  transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover,
+.sign-up-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #c23cd9, #6c15a1);
+  box-shadow: 0 6px 20px rgba(125, 14, 145, 0.5);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
