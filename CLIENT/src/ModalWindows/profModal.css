@@ -1,0 +1,145 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: popUp 0.35s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { background-color: rgba(0,0,0,0); }
+  to   { background-color: rgba(0,0,0,0.5); }
+}
+
+@keyframes popUp {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+.profile-avatar {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-nickname {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.label-inline {
+  font-weight: 600;
+  color: #222;
+}
+
+.nickname-text {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.nickname-input {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 160px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-close {
+  background-color: #7d7d7d;
+  color: #ffffff;
+}
+.btn-close:hover {
+  background-color: #000000;
+}
+
+.btn-logout {
+  background-color: #e74c3c;
+  color: white;
+}
+.btn-logout:hover {
+  background-color: #a83225;
+}
+
+.btn-edit {
+  background-color: #378ac1;
+  color: white;
+}
+.btn-edit:hover {
+  background-color: #246b9b;
+}
+
+.btn-save {
+  background-color: #009c4b;
+  color: white;
+}
+.btn-save:hover {
+  background-color: rgb(23, 104, 57);
+}
+
+.btn-cancel {
+  background-color: #7d7d7d;
+  color: white;
+}
+.btn-cancel:hover {
+  background-color: #000000;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
