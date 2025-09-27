@@ -1,0 +1,269 @@
+.info-panel-enter {
+  opacity: 0;
+  transform: translateY(-85px);
+}
+
+.info-panel-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-panel-enter-done {
+  opacity: 1;
+  transform: none;
+}
+
+.info-panel-exit {
+  opacity: 1;
+  transform: none;
+}
+
+.info-panel-exit-active {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition:
+    opacity 450ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-panel-exit-done {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+/*button for folder leaving*/
+
+.folder-header {
+  padding: 4px 20px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folder-header-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.folder-header-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.folder-header-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.folder-header-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+/*Folder and note icon indicators*/
+.folder-content-count{
+    font-size: 14px;
+    color: #666;
+    margin-top: 6px;
+}
+
+
+
+/* === Icons in NoteCard === */
+.note-icons {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.note-icons i,
+.note-icons .move-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.note-icons i:hover,
+.note-icons .move-icon:hover {
+  transform: scale(1.2);
+}
+
+
+.fa-heart {
+  color: rgba(0, 0, 0, 0.323);
+}
+.fa-heart.active {
+  color: rgb(229, 0, 0);
+}
+
+
+.fa-film {
+  color: rgba(0, 0, 0, 0.323);
+}
+.fa-film.active {
+  color: rgb(101, 29, 195);
+}
+
+.note-icons .fa-trash {
+  color: #57211bb0;
+}
+
+.note-icons .fa-trash:hover {
+  color: #8b1e12;
+}
+
+.folder-del{
+  color: #180e4c;
+}
+.folder-del:hover {
+  color: #2206ad;
+}
+
+.move-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  color:rgba(0, 0, 0, 0.323);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.move-icon:hover {
+  transform: scale(1.2);
+  color: #000;
+}
+
+.rating-wrapper {
+  position: absolute;
+  bottom: 6px;
+  left: 8px;
+  background: rgba(83, 22, 83, 0.6);
+  padding: 4px 6px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.rating-wrapper .star {
+  font-size: 16px;
+  margin: 0 9px;
+}
+
+
+
+/*/////////// catalog`s and folders` content animation handling////////////////*/
+
+.catalog-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.catalog-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.catalog-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.catalog-exit-active {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 600ms, transform 600ms;
+}
+
+.folder-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.folder-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.folder-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.folder-exit-active {
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 300ms, transform 300ms;
+}
+
+/*back to indicator*/
+
+.back-to-arrow {
+  font-size: 18px;
+}
+
+.back-to-catalog {
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #565656;
+}
+
+.back-to-catalog:hover {
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    transform: scale(1.01);
+    color: #000000;
+}
+
+.back-to-is-openfolder {
+  font-size: 26px;
+}
+
+.catalog-card {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+/* FOLDER */
+.folder-card {
+  color: #000000;
+  background-color: #c4e9ffaa;
+  cursor: pointer;
+}
+
+.folder-card:hover {
+  background-color: #81cdffa3;
+}
+
+.back-to-arrow{
+   color: #000000;
+}
+
+.back-to-is-openfolder{
+   color: #000000;
+}
+
+/* NOTE */
+.note-card {
+  color: #000000;
+  background-color: #ff9fe176;
+  cursor: default;
+}
+
+.note-card:hover {
+  background-color: #ff75d8a3;
+}
